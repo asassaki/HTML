@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulários</title>
+</head>
+<body>
+  <h1>Formulários</h1>
+  <!-- <form> -> Estrutura base de um formulário HTML -->
+  <!-- <input type="text"> -> Define um campo no formulário -->
+  <!-- <button> -> Botão -->
+  <!-- name -> Identifica componentes no servidor -->
+  <!-- value -> Indica o valor do campo -->
+  <!-- placeholder -> Define um texto explicativo para o campo -->
+  <!-- disabled -> Habilita/ desabilita um campo -->
+  <!-- min -> Define mínimo em  -->
+  <form>
+
+    Teste: <!-- Define um modelo de número que deve ter min. 4 e no máx. 8 dígitos-->
+    <input type="text" pattern="[0-9]{4,8}"><br><br>
+
+    Nome:
+    <input type="text" name="nome" placeholder="Nome Completo"><br><br>
+
+    E-mail:
+    <input type="email" name="email" placeholder="nome@exemplo.com"><br><br>
+
+    Senha:
+    <input type="password" name="senha" minlength="6"><br><br>
+
+    Idade:
+    <input type="number" name="idade"><br><br>
+
+    Data de Nascimento:
+    <input type="date" name="nascimento" min="2023-06-26" max="2023-11-26"><br><br>
+
+    Horário de Registro:
+    <input type="time" name="hora" value="12:30" disabled><br><br>
+
+    Telefone:
+    <input type="tel" name="tel"><br><br>
+
+    URL da Foto:
+    <input type="url" name="foto"><br><br>
+
+    Frente e verso do RG:
+    <input type="file" name="rg" accept=".png, .jpeg, .pdf" multiple><br><br>
+
+    Escolha sua cor favorita:
+    <input type="color" name="cor"><br><br>
+
+    Estado Civil:<br>
+    <!-- type="radio" -> Define um campo de opção -->
+    Solteiro<input type="radio" name="estado-civil" value="solteiro">  Casado<input type="radio" name="estado-civil" value="casado">  Divorciado<input type="radio" name="estado-civil" value="divorciado">  Viúvo<input type="radio" name="estado-civil" value="viuvo"><br><br>
+
+    <!-- type="checkbox" -> Define um campo marcável -->
+    Aceito os termos de uso: <input type="checkbox"><br><br>
+
+    Nível do idioma: 1<input type="range" min="1" max="5" step="0.5">5<br><br>
+
+    Estado:
+    <select name="estado">
+      <option disabled selected>Selecione um estado</option>
+      <option value="AC">Acre</option>
+      <option value="AL">Alagoas</option>
+      <option value="AP">Amapá</option>
+      <option value="AM">Amazonas</option>
+      <option value="BA">Bahia</option>
+      <option value="CE">Ceará</option>
+      <option value="DF">Distrito Federal</option>
+      <option value="ES">Espírito Santo</option>
+      <option value="GO">Goiás</option>
+      <option value="MA">Maranhão</option>
+      <option value="MT">Mato Grosso</option>
+      <option value="MS">Mato Grosso do Sul</option>
+      <option value="MG">Minas Gerais</option>
+      <option value="PA">Pará</option>
+      <option value="PB">Paraíba</option>
+      <option value="PR">Paraná</option>
+      <option value="PE">Pernambuco</option>
+      <option value="PI">Piauí</option>
+      <option value="RJ">Rio de Janeiro</option>
+      <option value="RN">Rio Grande do Norte</option>
+      <option value="RS">Rio Grande do Sul</option>
+      <option value="RO">Rondônia</option>
+      <option value="RR">Roraima</option>
+      <option value="SC">Santa Catarina</option>
+      <option value="SP">São Paulo</option>
+      <option value="SE">Sergipe</option>
+      <option value="TO">Tocantis</option>
+    </select><br><br>
+
+    Fale sobre você:<br>
+    <textarea cols="50" rows="5" placeholder="Mínimo de 50 caracteres e máximo de 100" minlength="50" maxlength="100"></textarea><br><br>
+
+    <!-- button -> Botão comum -->
+    <!-- submit -> Submeter as informações do formulário -->
+    <!-- reset -> Limpar os campos de um formulário -->
+    <button type="button">Sem função</button>
+    <button type="reset">Limpar dados</button>
+    <button type="submit">Enviar</button>
+    <br>
+    <input type="button" value="Sem função">
+    <input type="reset" value="Limpar dados">
+    <input type="submit" value="Enviar">
+  </form>
+</body>
+</html>
