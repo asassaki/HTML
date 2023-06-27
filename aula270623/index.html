@@ -1,51 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <title>Layout da Página</title>
 </head>
-<body>
-  <h1>Layout da Página</h1>
-  <h2>Cadastro de Super Herói</h2>
 
-  <!-- 
+<body>
+
+  <header>
+    <h1>Layout da Página</h1>
+    <nav>
+      <a href="">Sobre</a>
+      <a href="">Contato</a>
+      <a href="">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 
+    SEO (search engine optimization)
+    <header> -> Estrutura o cabeçalho da página
+    <main> -> Estrutura o corpo principal da página
+    <footer> -> Estrutura o rodapé da página
+    <aside> -> Estrutura uma barra lateral
+    <nav> -> (Navegação) Links
+    <section> -> Seção da página
+    <article> -> Define um artigo na página
+    <div> ->
+    -->
+
+    <section>
+      <h2 title="Cabeçalho">Cadastro de Super Herói</h2>
+      <!-- 
     GET -> Envia pela url
     POST -> Envia pelo pacote da requisição (fica escondido)
-   -->
+    -->
+      <form action="" method="post">
 
-  <form action="" method="post">
+        <fieldset>
+          <legend>Informações pessoais</legend>
+          <table>
+            <tr>
+              <td><label for="nome">Nome:</label></td>
+              <td><input type="text" name="nome" id="nome" maxlength="100" required></td>
+            </tr>
+            <tr>
+              <td><label for="email">E-mail:</label></td>
+              <td><input type="email" name="email" id="email" maxlength="200" required></td>
+            </tr>
+            <tr>
+              <td><label for="poder">Poder:</label></td>
+              <td><input type="text" name="poder" id="poder" maxlength="500"
+                  placeholder="Digite os poderes separados por vírgula" required></td>
+            </tr>
+          </table>
+        </fieldset><br>
 
-    <fieldset>
-      <legend>Informações pessoais</legend>
-      <label for="nome">Nome:</label>
-      <input type="text" name="nome" id="nome" maxlength="100" required><br>
+        <fieldset>
+          <legend>Informações de endereço</legend>
+          <table>
+            <tr>
+              <td><label for="rua">Rua:</label></td>
+              <td><input type="text" name="rua" id="rua" maxlength="200" required></td>
+            </tr>
+            <tr>
+              <td><label for="num">Número:</label></td>
+              <td><input type="text" name="num" id="num" maxlength="10" required></td>
+            </tr>
+            <tr>
+              <td><label for="estado">UF:</label></td>
+              <td><input type="text" name="estado" id="estado" maxlength="200" required></td>
+            </tr>
+            <tr>
+              <td><label for="cidade">Cidade:</label></td>
+              <td><input type="text" name="cidade" id="cidade" maxlength="200" required></td>
+            </tr>
+          </table>
+        </fieldset><br>
 
-      <label for="email">E-mail:</label>
-      <input type="email" name="email" id="email" maxlength="200" required><br>
+        <button>Enviar</button>
+      </form>
+    </section>
 
-      <label for="poder">Poder:</label>
-      <input type="text" name="poder" id="poder" maxlength="500" placeholder="Digite os poderes separados por vírgula" required>
+    <section>
+      <article>
+        <h2>Artigos</h2>
+        <h3>Artigo 1</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique dolor, cum laudantium ad maxime
+          consectetur vel saepe magnam nostrum libero ipsa sapiente eius? Commodi, error corporis ab excepturi quasi
+          facere.</p>
+        <h3>Artigo 2</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi possimus laudantium dolorem autem modi,
+          totam fuga pariatur doloremque vel mollitia commodi dolore, tenetur ducimus illo, quia accusantium obcaecati
+          beatae quam?</p>
+        <h3>Artigo 3</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nemo natus placeat non, aliquid sapiente hic
+          consectetur, quaerat fugiat, voluptatibus aliquam nulla magni ducimus fugit? Ut, perferendis cupiditate.
+          Maxime, minima?</p>
+      </article>
+    </section>
 
-    </fieldset>
+  </main>
 
-    <fieldset>
-      <legend>Informações de endereço</legend>
+  <aside>
+    <div>
+      <div>
+        <div>
+          <div>
+            Lateral
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
 
-      <label for="rua">Rua:</label>
-      <input type="text" name="rua" id="rua" maxlength="200" required><br>
-
-      <label for="num">Número:</label>
-      <input type="text" name="num" id="num" maxlength="10" required><br>
-
-      <label for="estado">UF:</label>
-      <input type="text" name="estado" id="estado" maxlength="200" required><br>
-
-      <label for="cidade">Cidade:</label>
-      <input type="text" name="cidade" id="cidade" maxlength="200" required><br>
-
-    </fieldset>
-
-    <button>Enviar</button>
-  </form>
+  <footer>
+    &copy; Todos os direitos reservados SoulCode Academy e Porto Seguro.
+  </footer>
 </body>
+
 </html>
